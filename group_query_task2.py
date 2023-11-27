@@ -231,7 +231,13 @@ class GPT(nn.Module):
         config = GPTConfig(**config_args)
         model = GPT(config)
         sd = model.state_dict()
-        sd_keys = sd.keys()
+        # model = GPT.from_pretrained('gpt2', override_args={'dropout': 0.0})
+
+        # Perform GROUP QUERY ATTENTTION
+        key_heads = model.transformer.h[0].attn.c_attn.weight.mean(dim=0)
+        value_heads = model.transformer.h[0].attn.c_attn.weight.mean(dim=0)
+
+        sd_keys = key_heads.keys()
         sd_keys = [k for k in sd_keys if not k.endswith('.attn.bias')] # discard this mask / buffer, not a param
 
         # init a huggingface/transformers model
@@ -301,6 +307,7 @@ class GPT(nn.Module):
         flops_promised = 312e12 # A100 GPU bfloat16 peak flops is 312 TFLOPS
         mfu = flops_achieved / flops_promised
         return mfu
+    
 
     @torch.no_grad()
     def generate(self, idx, max_new_tokens, temperature=1.0, top_k=None):
