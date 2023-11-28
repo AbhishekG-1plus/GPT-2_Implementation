@@ -1,11 +1,15 @@
 # Task -1 :
-Data Loading:
-
-![data_load](https://github.com/AbhishekG-1plus/GPT-2_contlo/assets/77354191/693c7cff-1c67-4933-9d7f-ffeb0b762636)
+Data was loaded from OpenWebText of the nanoGPT github.
 
 GPT-2 (124M ) training on OpenWebText:
 
-![GPT2-Training](https://github.com/AbhishekG-1plus/GPT-2_contlo/assets/77354191/d1b48fa8-1acd-4de8-a272-55f1592bef7d)
+<img src="https://github.com/AbhishekG-1plus/GPT-2_contlo/assets/77354191/d1b48fa8-1acd-4de8-a272-55f1592bef7d" width="400" height="300">
+
+
+Sample Prediction of GPT2:
+
+<img src="https://github.com/AbhishekG-1plus/GPT-2_contlo/assets/77354191/d64d97eb-8fc9-4439-962e-86dd60748418" width="400" height="300">
+
 
 
 
