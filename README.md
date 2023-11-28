@@ -1,4 +1,5 @@
-# Task -1 :
+# GPT-2 Implementation
+## Details of all the tasks : [REPORT](https://docs.google.com/document/d/1GagBCirTLk43F-CXOxePy5YKvFI4BYs_cWWwGjaTw8M/edit?usp=sharing)
 Data was loaded from OpenWebText of the nanoGPT github.
 
 GPT-2 (124M ) training on OpenWebText:
