@@ -16,7 +16,7 @@ GPT-2 (124M ) training on OpenWebText:
 3. **Sample Prediction:**
    [Sample Prediction](./images/sample_prediction.png)
 
-# nanoGPT
+## GPT-2 (124M) Implementation
 
 
 The simplest, fastest repository for training/finetuning medium-sized GPTs. It is a rewrite of [minGPT](https://github.com/karpathy/minGPT). Currently the file `train__task3.py` reproduces GPT-2 (124M) on OpenWebText, running on a single 8XA100 40GB node in about 4 days of training. The code itself is plain and readable: `train_task3.py` is a ~300-line boilerplate training loop and `model_task1.py` a ~300-line GPT model definition, which can optionally load the GPT-2 weights from OpenAI.
